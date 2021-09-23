@@ -1,9 +1,25 @@
 @import 'ember-bootstrap/bootstrap';
 @import './components/header.scss';
-
+@import './components/carousel.scss';
 .body {
   height: 100vh;
   padding-top: 10vh;
+}
+
+@media (max-width: 978px) {
+  .container {
+    padding:0;
+    margin:0;
+  }
+
+  .body {
+    padding:0;
+    .col-12{
+      padding-right: 0;
+    }
+  }
+
+
 }
 
 .footer {
