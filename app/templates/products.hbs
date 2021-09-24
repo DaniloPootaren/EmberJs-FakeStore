@@ -1,0 +1,13 @@
+{{page-title "Products"}}
+{{outlet}}
+<div class="product-container">
+  <div class="container">
+    <div class="row">
+      {{#each this.model as |item|}}
+      <div class="col">
+        <ProductItem @title={{item.title}} @imageUrl={{item.image}} @price={{item.price}} />
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

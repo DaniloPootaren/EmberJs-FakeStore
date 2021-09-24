@@ -1,8 +1,10 @@
 @import 'ember-bootstrap/bootstrap';
 @import './components/header.scss';
 @import './components/carousel.scss';
+@import './components/productItem.scss';
+
 .body {
-  height: 100vh;
+
   padding-top: 10vh;
 }
 
@@ -22,5 +24,4 @@
 
 }
 
-.footer {
-}
+
