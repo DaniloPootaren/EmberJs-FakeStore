@@ -5,7 +5,7 @@
     <div class="row">
       {{#each this.model as |item|}}
       <div class="col">
-        <ProductItem @title={{item.title}} @imageUrl={{item.image}} @price={{item.price}} />
+        <ProductItem @title={{item.title}} @imageUrl={{item.image}} @price={{currency item.price}} />
       </div>
       {{/each}}
     </div>
