@@ -1,0 +1,26 @@
+.shopingButton{
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: $warning;
+  color: $secondary;
+  height: 50px;
+  width: 50px;
+  border-radius: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 11px 8px rgb(0 0 0 / 36%);
+
+  .shopping-badge{
+    position: absolute;
+    background-color:$danger;
+    font-size: xx-small;
+    color: #fff;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 5em;
+    top: 0px;
+    right: 1px;
+  }
+}
