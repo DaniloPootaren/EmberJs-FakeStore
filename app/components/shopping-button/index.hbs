@@ -1,6 +1,8 @@
 <LinkTo @route="cart">
-<div class="shopingButton" {{did-insert componentDidMount}}>
+<div class="shopingButton" {{did-insert this.componentDidMount}}>
   <FaIcon @icon="shopping-cart" />
-  <div class="shopping-badge d-flex justify-content-center align-items-center">0</div>
+  {{#if this.items.length}}
+  <div class="shopping-badge d-flex justify-content-center align-items-center">{{this.items.length}}</div>
+  {{/if}}
 </div>
 </LinkTo>

@@ -1,7 +1,12 @@
 import Component from '@glimmer/component';
 import $ from 'jquery';
+import { inject as service } from '@ember/service';
 
 export default class ShoppingButtonIndexComponent extends Component {
+  @service('cart') cartService;
+
+  items = this.cartService.items;
+
   componentDidMount(element) {
     const cartButton = $(element);
     let lastScrollTop = 0;

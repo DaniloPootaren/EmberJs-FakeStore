@@ -1,4 +1,4 @@
 {{page-title "Cart"}}
-{{outlet}}
-
-shopping cart
+{{#each @model as |shoppingItem|}}
+<p>{{shoppingItem.title}}</p>
+{{/each}}
