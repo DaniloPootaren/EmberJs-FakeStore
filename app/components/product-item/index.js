@@ -10,11 +10,16 @@ export default class ProductItemIndexComponent extends Component {
 
   @action
   checkItemInCart(id, callback) {
-    callback();
+      callback();
     if (this.cartService.items.findBy('id', id)) {
       this.addedToCart = true;
     } else {
       this.addedToCart = false;
     }
+  }
+
+  @action
+  dum(){
+    console.log('test')
   }
 }

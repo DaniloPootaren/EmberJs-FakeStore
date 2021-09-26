@@ -1,5 +1,5 @@
 <div class="card-container">
-  <div class="card product-item">
+  <div class="card product-item" {{did-insert (fn this.checkItemInCart @item.id (fn this.dum)) }}>
     <img src={{@item.image}} class="product-image card-img-top" alt="...">
     <div class="card-body">
       <h5>{{@item.title}}</h5>
