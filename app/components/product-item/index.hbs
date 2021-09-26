@@ -1,12 +1,14 @@
 <div class="card-container">
-  <div class="card product-item" {{did-insert componentDidMount}}>
-    <img src={{@imageUrl}} class="product-image card-img-top" alt="...">
+  <div class="card product-item">
+    <img src={{@item.image}} class="product-image card-img-top" alt="...">
     <div class="card-body">
-      <h5>{{@title}}</h5>
+      <h5>{{@item.title}}</h5>
     </div>
     <div class="footer">
-      <p class="card-text"><span class="badge badge-secondary"><strong>Price: </strong>{{@price}}</span></p>
-      <button type="button" class="btn btn-warning" {{on 'click' (fn @handleCartAction item)}}>Add to cart</button>
+      <p class="card-text"><span class="badge badge-secondary"><strong>Price: </strong>{{@item.price}}</span></p>
+      <button type="button" class="btn btn-warning" {{on 'click' (fn this.checkItemInCart @item.id (fn @handleCartAction
+        item))}} disabled={{this.addedToCart}}>Add
+        to cart</button>
     </div>
   </div>
 </div>
