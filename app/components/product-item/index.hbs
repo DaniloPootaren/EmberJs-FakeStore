@@ -1,12 +1,12 @@
 <div class="card-container">
-  <div class="card product-item" {{did-insert (fn this.checkItemInCart @item.id (fn this.dum)) }}>
+  <div class="card product-item" {{did-insert (fn this.init @item) }}>
     <img src={{@item.image}} class="product-image card-img-top" alt="...">
     <div class="card-body">
       <h5>{{@item.title}}</h5>
     </div>
     <div class="footer">
       <p class="card-text"><span class="badge badge-secondary"><strong>Price: </strong>{{@item.price}}</span></p>
-      <button type="button" class="btn btn-warning" {{on 'click' (fn this.checkItemInCart @item.id (fn @handleCartAction
+      <button type="button" class="btn btn-warning" {{on 'click' (fn this.handleButtonAddToCart @item (fn @handleCartAction
         item))}} disabled={{this.addedToCart}}>Add
         to cart</button>
     </div>

@@ -9,17 +9,21 @@ export default class ProductItemIndexComponent extends Component {
   @tracked addedToCart = false;
 
   @action
-  checkItemInCart(id, callback) {
-      callback();
-    if (this.cartService.items.findBy('id', id)) {
+  handleButtonAddToCart(item, callback) {
+    callback();
+    this.disabledButton(item);
+  }
+
+  @action
+  init(item) {
+    this.disabledButton(item);
+  }
+
+  disabledButton(item) {
+    if (this.cartService.items.findBy('id', item.id)) {
       this.addedToCart = true;
     } else {
       this.addedToCart = false;
     }
-  }
-
-  @action
-  dum(){
-    console.log('test')
   }
 }
