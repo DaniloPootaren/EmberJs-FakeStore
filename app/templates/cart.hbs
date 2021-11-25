@@ -1,4 +1,10 @@
 {{page-title "Cart"}}
-{{#each @model as |shoppingItem|}}
-<p>{{shoppingItem.title}}</p>
-{{/each}}
+<div class="cart-list container">
+  {{#if @model.length}}
+  {{#each @model as |shoppingItem|}}
+    <ProductTile @shoppingItem={{shoppingItem}} />
+    {{/each}}
+{{else}}
+<h3>You don't have any item in your basket.</h3>
+{{/if}}
+</div>
